@@ -1,0 +1,19 @@
+#!/bin/sh
+# Maven Wrapper script
+# Automatically downloads Maven if not present
+
+MAVEN_PROJECTBASEDIR=$(cd "$(dirname "$0")" && pwd)
+MAVEN_WRAPPER_JAR="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar"
+MAVEN_WRAPPER_PROPERTIES="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.properties"
+
+if [ -f "$MAVEN_WRAPPER_JAR" ]; then
+    exec java -jar "$MAVEN_WRAPPER_JAR" "$@"
+fi
+
+# Fallback: use system mvn
+if command -v mvn >/dev/null 2>&1; then
+    exec mvn "$@"
+fi
+
+echo "Maven not found. Please install Maven 3.9+ or run: brew install maven"
+exit 1

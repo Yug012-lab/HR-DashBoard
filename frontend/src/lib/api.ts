@@ -98,3 +98,4 @@ export const recruitmentApi = {
     api.put(`/api/recruitment/candidates/${id}/status`, { status }),
 }
 
+

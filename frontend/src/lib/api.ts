@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useAuthStore } from '../store/authStore'
 
 const api = axios.create({
-  baseURL: (window as any).__VITE_API_URL__ || (typeof import.meta !== 'undefined' ? (import.meta as any).env?.VITE_API_URL : und
+  baseURL: 'https://hr-dashboard-e93g.onrender.com'efined' ? (import.meta as any).env?.VITE_API_URL : und
   headers: { 'Content-Type': 'application/json' },
 })
 
@@ -97,3 +97,4 @@ export const recruitmentApi = {
   updateCandidateStatus: (id: number, status: string) =>
     api.put(`/api/recruitment/candidates/${id}/status`, { status }),
 }
+
